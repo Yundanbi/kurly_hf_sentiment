@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>감성 분석 결과</title>
+</head>
+<body>
+<h2>감성 분석 결과</h2>
+
+<!-- 오류 메시지 -->
+<div th:if="${error != null}">
+    <p th:text="${error}" style="color:red;"></p>
+</div>
+
+<!-- 분석 결과 -->
+<div th:if="${sentiment != null}">
+    <p><strong>입력 문의:</strong> <span th:text="${review}">문의 텍스트</span></p>
+    <p><strong>감성 점수:</strong> <span th:text="${sentiment}">0</span></p>
+</div>
+
+<!-- 유사한 문의 추천 -->
+<h3 th:if="${recommendations != null and !#lists.isEmpty(recommendations)}">유사한 문의 추천</h3>
+<ul th:if="${recommendations != null and !#lists.isEmpty(recommendations)}">
+    <li th:each="item : ${recommendations}">
+        <span th:text="${item['review_text']}">문의 리뷰</span>
+        (점수: <span th:text="${item['sentiment_label']}">0</span>)
+    </li>
+</ul>
+<p th:if="${recommendations == null or #lists.isEmpty(recommendations)}">추천 결과가 없습니다.</p>
+
+<a th:href="@{/sentiment/form}">다시 분석하기</a>
+</body>
+</html>
