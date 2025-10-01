@@ -18,8 +18,8 @@
 ---
 
 ## 🔗 Quick Links
-- 👉 간단 ERD : https://github.com/Spring-team-Project2025/stay_folio_main  
-- 👉 시스템 다이어그램/테이블 정의: https://spring-team-project2025.github.io/stay_folio_documents/
+- 👉 간단 ERD : ![005](https://github.com/user-attachments/assets/7841e313-231c-476b-ac83-59add53275f1)
+
 
 ---
 
