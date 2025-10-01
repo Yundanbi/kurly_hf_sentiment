@@ -1,191 +1,77 @@
-<div align="center"> <img src="https://img.shields.io/badge/Kurly%20HF%20Sentiment-5f0080?style=for-the-badge&labelColor=5f0080&color=5f0080&logo=github&logoColor=white" height="28"/>
-🛒 Kurly HF Sentiment
+🛒 Kurly Clone Project
 
-<sub>React + Spring Boot + Flask(Hugging Face) 기반 고객문의 게시판 · 감성분석 · JWT 권한제어</sub>
-
-<br/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/>
-
-<a href="#-데모">🎬 데모</a> •
-<a href="#-프로젝트-개요">📖 개요</a> •
-<a href="#-개발-스택">🛠 스택</a> •
-<a href="#-아키텍처--흐름">🏗 아키텍처</a> •
-<a href="#-설치--실행">⚙ 설치</a> •
-<a href="#-api-요약">🔗 API</a> •
-<a href="#-스크린샷">📸 스크린샷</a> •
-<a href="#-트러블슈팅--로드맵">🧭 트러블슈팅/로드맵</a>
-
-</div>
-🎬 데모
-
-영상은 저장소 Releases 또는 user-attachments에 업로드 후 아래 링크/썸네일만 교체하세요.
-
-<a href="YOUR_DEMO_VIDEO_URL.mp4"> <img src="YOUR_THUMBNAIL_IMAGE_URL.png" alt="Demo" width="860"/> </a> <!-- 또는 GIF 미리보기 <img src="YOUR_DEMO_GIF_URL.gif" alt="Demo GIF" width="860"/> -->
-
-Tip
-• GitHub는 <video> 인라인 재생 제약이 있어요. 썸네일 → mp4 링크, 또는 GIF 추천.
-• YouTube 사용 시 썸네일 클릭 → YouTube 이동 링크 권장.
+Market Kurly 웹사이트를 벤치마킹한 클론 프로젝트입니다.
+JWT 기반 인증, 리뷰 감성 분석(HuggingFace), 권한 기반 게시판을 구현했습니다.
 
 📖 프로젝트 개요
 
-마켓컬리 스타일 고객 문의 게시판에 AI 감성 분석(Hugging Face) 과 JWT 권한 제어를 적용했습니다.
+프로젝트 기간: 2025.07 ~ 2025.09
 
-핵심 기능
+목표: 실무 환경을 모사하여 JWT 인증과 AI 감성 분석을 적용한 커머스 플랫폼 구축
 
-회원가입/로그인(JWT 발급)
+담당 역할:
 
-게시판 CRUD
+JWT 로그인 & 권한 처리
 
-입력 글 감성 분석(부정/중립/긍정) + 유사 문의 추천
+게시판 CRUD + 페이징
 
-작성자/관리자만 수정·삭제 (JWT 토큰 사용자 ID ↔ 작성자 ID 검증)
+HuggingFace 감성 분석 서버 연동
 
-🛠 개발 스택
+DB 모델링 및 설계
 
-Frontend
-
-React 18, React Router
-
-Axios(인터셉터로 JWT 자동 첨부)
-
-HTML / CSS / JavaScript
-
-Backend (API)
-
-Spring Boot 3 (Web, Security), JPA(Hibernate)
-
-MySQL 8.x
-
-JWT (jjwt)
-
-Lombok, Log4j2
-
-AI/NLP (ML 서비스)
-
-Flask 2+
-
-Hugging Face transformers
-모델: nlptown/bert-base-multilingual-uncased-sentiment
-
-(옵션) SQLAlchemy, requests
-
-🏗 아키텍처 & 흐름
-flowchart TD
-  A[React UI] -->|POST /sentiment/analyze/json| B(Spring Boot API)
-  B -->|HTTP| C[Flask · Hugging Face Model]
-  C -->|sentiment(0/1/2), recommendations| B
-  B --> A
-
-  subgraph Auth(JWT)
-    D[JwtAuthFilter] --> E[SecurityContext ROLE_USER / ROLE_ADMIN]
-  end
+📊 기술 스택
+구분	사용 기술
+Backend	Spring Boot, JPA, MySQL, JWT
+Frontend	React, Redux, Axios, Styled Components
+AI	Flask, HuggingFace Transformers
+Infra	GitHub, Postman, IntelliJ, VSCode
 
 
-인증/인가: Authorization: Bearer <token> → JwtAuthFilter 검증 → SecurityContext 권한 주입
+✨ 주요 기능
+🔑 인증 & 권한
 
-권한 Gate(서비스 레벨): isAdmin || authorId == currentUserId
+JWT 토큰 기반 로그인 / 회원가입
 
-⚙ 설치 & 실행
-1) Flask (AI 서버)
-cd flask_app
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-source .venv/bin/activate
-pip install -r requirements.txt
-flask run --port 5000
+본인 글만 수정·삭제 가능, 타인의 글은 읽기 전용
 
-2) Spring Boot (Backend)
+📝 게시판
 
-backend/src/main/resources/application.yml
+CRUD + 검색 + 페이징
 
-spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/kurly
-    username: root
-    password: root
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
+React + Axios API 연동
 
-app:
-  jwt:
-    secret: mysecretkeymysecretkeymysecretkey1234
-  flask:
-    base: http://127.0.0.1:5000
+🤖 감성 분석
 
+HuggingFace 모델로 리뷰 텍스트 감성 점수(긍/부/중립) 계산
 
-실행:
+Flask 서버와 Spring Boot 연동
 
-./mvnw spring-boot:run
+🗂 DB 모델링
 
-3) React (Frontend)
+🚀 실행 방법
+# Backend
+cd backend
+./gradlew bootRun
+
+# Frontend
 cd frontend
 npm install
-npm start   # http://localhost:3000
+npm start
 
+# AI Service
+cd kurly_review_app
+pip install -r requirements.txt
+python app.py
 
-CORS: Spring/Flask 모두 http://localhost:3000 허용.
-Axios 인터셉터에서 Authorization: Bearer <token> 자동 첨부.
+🌟 배운 점 & 개선 사항
 
-🔗 API 요약
+JWT 인증 구조와 React 연동의 흐름을 체득
 
-Auth
+Flask + HuggingFace를 실제 서비스에 적용
 
-POST /api/auth/login → { token }
+ERD 및 규약을 초기에 명확히 정의하는 중요성 체감
 
-POST /api/auth/signup (옵션)
-
-Board
-
-GET /api/boards, GET /api/boards/{id}
-
-POST /api/boards (JWT)
-
-PUT /api/boards/{id} (작성자/관리자)
-
-DELETE /api/boards/{id} (작성자/관리자)
-
-Sentiment
-
-POST /sentiment/analyze/json → { sentiment: 0|1|2, recommendations: [...] }
-(Spring이 Flask /api/analyze 중계)
-
-권한 체크 (예시)
-
-if (!isAdmin && !board.getAuthor().getId().equals(currentUserId)) {
-    throw new ResponseStatusException(HttpStatus.FORBIDDEN, "권한 없음");
-}
-
-📂 폴더 구조(예시)
-root
-├─ backend
-│  ├─ src/main/java/com/kurly
-│  │  ├─ config (SecurityConfig, JwtAuthFilter, JwtUtil)
-│  │  ├─ controller (BoardController, AuthController, SentimentController)
-│  │  ├─ entity (User, Board, Answer*)
-│  │  ├─ repository
-│  │  └─ service
-│  └─ resources (application.yml)
-├─ flask_app
-│  ├─ app.py
-│  └─ models/sentiment_model.py
-└─ frontend
-   └─ src (api, pages, components, ...)
+추후 개선: 환불 API 연동, CI/CD 파이프라인, 테스트 코드 강화
 
 📸 스크린샷
 
