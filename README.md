@@ -1,5 +1,5 @@
 <!-- 헤더: 타이틀 + 배지 (가운데 정렬) -->
-<h1 align="center">🛒 Kurly Clone Project</h1>
+<h1 align="center">🛒 Kurly JWT Hugging Face Project</h1>
 <p align="center">
   Market Kurly 웹을 벤치마킹한 <b>클론 프로젝트</b>입니다.<br/>
   <b>JWT 인증</b>, <b>권한 기반 게시판</b>, <b>HuggingFace 감성 분석</b>을 구현했습니다.
