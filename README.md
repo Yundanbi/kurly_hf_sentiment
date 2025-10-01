@@ -18,7 +18,7 @@
 ---
 
 ## 🔗 Quick Links
-- 👉 StayFolio 팀 레포: https://github.com/Spring-team-Project2025/stay_folio_main  
+- 👉 간단 ERD : https://github.com/Spring-team-Project2025/stay_folio_main  
 - 👉 시스템 다이어그램/테이블 정의: https://spring-team-project2025.github.io/stay_folio_documents/
 
 ---
@@ -111,40 +111,29 @@ Spring Boot + React + MySQL 기반. JWT 인증/인가, Flask(HuggingFace)로 감
 
 ---
 
-## 🔑 담당 기능 (상세)
-### 1) 예약 로직
-- 체크인/체크아웃 처리, 숙박일수 계산  
-- 날짜·인원별 요금 계산 + 할인율 적용 → **총 결제 금액 산출**  
-- 예약 완료 시 예약번호 자동 생성 (MyBatis `<selectKey>` + Oracle 시퀀스)
 
-### 2) 비회원 예약 조회/취소
-- 이메일 인증 기반 비회원 조회  
-- **예약완료 & 당일 이전** 조건일 때 취소 버튼 노출/처리
-
-### 3) 숙소 검색
-- 카테고리/날짜/인원수 파라미터 기반 검색  
-- JSP 페이징 + 검색 조건 유지 (hidden + querystring)
 
 ---
 
-## 🚀 실행 방법
-```bash
-# Backend
-cd backend
-./gradlew bootRun
 
-# Frontend
-cd frontend
-npm install
-npm start
+## PPT
+![001](https://github.com/user-attachments/assets/ddb962d0-5b58-4438-a7f4-22c5bd8fd37d)
+![002](https://github.com/user-attachments/assets/47f3793a-401f-4212-aed2-31e94a5e9890)
+![003](https://github.com/user-attachments/assets/f1e20018-1632-455d-a125-0f6e8ee64204)
+![004](https://github.com/user-attachments/assets/a58bd494-c1ad-4a9e-ada0-d96dd65a42ca)
+![005](https://github.com/user-attachments/assets/7841e313-231c-476b-ac83-59add53275f1)
+![006](https://github.com/user-attachments/assets/22f6bfaf-a8d9-43e6-84c1-36c2e99ff7b9)
+![007](https://github.com/user-attachments/assets/87928782-3f96-4fa7-88ac-3119ebc0fb90)
+![008](https://github.com/user-attachments/assets/e0e36d32-f47c-45af-abe7-88479ea8585b)
+![009](https://github.com/user-attachments/assets/bf6a7efd-e00a-4b3b-becb-3932a977adef)
+![010](https://github.com/user-attachments/assets/b5d4a7ea-874c-47fb-b71d-c996e0991a9e)
+![011](https://github.com/user-attachments/assets/87e46ad8-5273-48a6-b4e3-c7370c175abc)
+![012](https://github.com/user-attachments/assets/a4ab1a4f-1f3e-4bb4-9aca-9bb693441bb9)
+![013](https://github.com/user-attachments/assets/947d0046-3339-4b30-a01a-3543428199ad)
+![014](https://github.com/user-attachments/assets/a2811a30-ae3e-4075-a610-ea3385d75559)
+![015](https://github.com/user-attachments/assets/02d4cb23-0161-4228-9b8e-cac2f3ea4951)
+![016](https://github.com/user-attachments/assets/e58a11ca-ef21-45d3-a87a-034380f9b50d)
+![017](https://github.com/user-attachments/assets/96d8955a-1891-4d01-89e4-d74f38603b47)
+![018](https://github.com/user-attachments/assets/367e4e16-26c5-42bb-a700-b92f3f118e4c)
 
-# AI Service (Flask)
-cd kurly_review_app
-pip install -r requirements.txt
-python app.py
 
-📸 스크린샷
-
-필요하면 “펼쳐보기”로 접어두면 깔끔합니다.
-
-<details> <summary><b>펼쳐보기 (클릭)</b></summary><br> <img src="https://github.com/user-attachments/assets/28448301-9c4d-4c63-9b44-32be9f8d8310" width="860"/> <img src="https://github.com/user-attachments/assets/2f5c23f7-949f-4069-88a9-c9a6d61a0f7d" width="860"/> <img src="https://github.com/user-attachments/assets/f4e338ea-51d0-4148-ba3e-8bb9a1af60f5" width="860"/> <img src="https://github.com/user-attachments/assets/d183096a-a18e-436c-a80c-fdc5ac8606ab" width="860"/> <img src="https://github.com/user-attachments/assets/899914ae-6418-45cf-9df1-d9afea0f5578" width="860"/> <img src="https://github.com/user-attachments/assets/1e608e75-40e1-46e8-aac1-7d52f2c84c7d" width="860"/> <img src="https://github.com/user-attachments/assets/500072c0-21de-4221-8246-4496337db58c" width="860"/> <img src="https://github.com/user-attachments/assets/cdb19e3c-eb8c-4396-8087-b5208dc1f95c" width="860"/> <img src="https://github.com/user-attachments/assets/0a03418e-f97e-4693-836c-5ee507646d81" width="860"/> <img src="https://github.com/user-attachments/assets/59455695-42ea-45bb-8d36-a003bcc28355" width="860"/> <img src="https://github.com/user-attachments/assets/46d7928f-3b19-4924-8803-6630a77df737" width="860"/> <img src="https://github.com/user-attachments/assets/45e40969-e7f8-4ca4-a3ce-3ef6e923ef3f" width="860"/> <img src="https://github.com/user-attachments/assets/96b510fd-5d37-4f44-841b-ee97d8023a67" width="860"/> <img src="https://github.com/user-attachments/assets/fd58ca1b-1d0a-47d4-af32-863030a61cf9" width="860"/> <img src="https://github.com/user-attachments/assets/11e2123c-13d6-4b4a-ba91-b04582d7acdb" width="860"/> <img src="https://github.com/user-attachments/assets/a6d3dd91-f15a-440c-adea-791b95f959de" width="860"/> <img src="https://github.com/user-attachments/assets/7d44a8e2-6a28-4622-aec5-59bf57748ef6" width="860"/> <img src="https://github.com/user-attachments/assets/a07354f8-7443-4be5-9b0e-3022c7748e22" width="860"/> </details>
