@@ -35,16 +35,6 @@
 ---
 
 ## 🛠 Tech Stack (요약)
-**말로 한 줄 요약:**  
-Spring Boot + React + MySQL 기반. JWT 인증/인가, Flask(HuggingFace)로 감성 분석, GitHub 협업.
-
-**불릿형:**  
-- **Backend:** Spring Boot 3.5.x, JPA, MySQL, JWT  
-- **Frontend:** React, Redux, Axios, React Router, Styled Components  
-- **AI Service:** Python Flask, HuggingFace Transformers  
-- **Infra/Tools:** GitHub, Postman, IntelliJ, VSCode, SourceTree
-
-**표 버전:**
 
 | 구분        | 사용 기술 |
 |-------------|-----------|
@@ -70,23 +60,6 @@ Spring Boot + React + MySQL 기반. JWT 인증/인가, Flask(HuggingFace)로 감
 
 ---
 
-## 🗂 DB/시스템 다이어그램
-> 전체 테이블 구조 및 컬럼 정의는 링크에서 확인  
-> 👉 https://spring-team-project2025.github.io/stay_folio_documents/
-
-<details>
-  <summary><b>다이어그램 (펼쳐보기)</b></summary>
-  <br/>
-  <img width="1372" height="772" src="https://github.com/user-attachments/assets/90e91772-b9ea-4626-a83d-4da307c483ff" />
-  <img width="1370" height="773" src="https://github.com/user-attachments/assets/d574e1a7-b840-43ee-be4f-41f8462f34ea" />
-  <img width="1369" height="769" src="https://github.com/user-attachments/assets/913c1b56-9f8d-4caf-b3bf-381f1176c287" />
-  <img width="1371" height="770" src="https://github.com/user-attachments/assets/1867a4d6-9691-49fc-a91c-cafd11dc76db" />
-  <img width="1371" height="770" src="https://github.com/user-attachments/assets/58244710-cf7c-4434-a0f2-9ec6d7930d8b" />
-  <img width="1372" height="769" src="https://github.com/user-attachments/assets/c6e272e9-9b04-4b7b-9b18-8ac75f83b36a" />
-</details>
-
----
-
 ## 🖥️ 구현 화면
 | 기능 | 화면 |
 |---|---|
@@ -97,45 +70,27 @@ Spring Boot + React + MySQL 기반. JWT 인증/인가, Flask(HuggingFace)로 감
 | 회원으로 문의글 보기 | ![일반회원 본인거만 수정 삭제 가능](https://github.com/user-attachments/assets/0956d301-1997-4b5a-9eda-fcff36fbdf6f) |
 | 어드민/회원 문의 댓글 보기 | ![어드민시 수정삭제가능 비회원시 읽기만 가능](https://github.com/user-attachments/assets/66e840df-ef4f-4cce-8113-e02aab5c2057) |
 
-<details>
-  <summary><b>📸 추가 스크린샷 (펼쳐보기)</b></summary><br>
-  <img src="https://github.com/user-attachments/assets/28448301-9c4d-4c63-9b44-32be9f8d8310" width="860"/>
-  <img src="https://github.com/user-attachments/assets/2f5c23f7-949f-4069-88a9-c9a6d61a0f7d" width="860"/>
-  <img src="https://github.com/user-attachments/assets/f4e338ea-51d0-4148-ba3e-8bb9a1af60f5" width="860"/>
-  <img src="https://github.com/user-attachments/assets/d183096a-a18e-436c-a80c-fdc5ac8606ab" width="860"/>
-  <img src="https://github.com/user-attachments/assets/899914ae-6418-45cf-9df1-d9afea0f5578" width="860"/>
-  <img src="https://github.com/user-attachments/assets/1e608e75-40e1-46e8-aac1-7d52f2c84c7d" width="860"/>
-  <img src="https://github.com/user-attachments/assets/500072c0-21de-4221-8246-4496337db58c" width="860"/>
-  <img src="https://github.com/user-attachments/assets/cdb19e3c-eb8c-4396-8087-b5208dc1f95c" width="860"/>
-  <img src="https://github.com/user-attachments/assets/0a03418e-f97e-4693-836c-5ee507646d81" width="860"/>
-  <img src="https://github.com/user-attachments/assets/59455695-42ea-45bb-8d36-a003bcc28355" width="860"/>
-</details>
-
----
-
-
-
 ---
 
 
 ## PPT
-![001](https://github.com/user-attachments/assets/ddb962d0-5b58-4438-a7f4-22c5bd8fd37d)
-![002](https://github.com/user-attachments/assets/47f3793a-401f-4212-aed2-31e94a5e9890)
-![003](https://github.com/user-attachments/assets/f1e20018-1632-455d-a125-0f6e8ee64204)
-![004](https://github.com/user-attachments/assets/a58bd494-c1ad-4a9e-ada0-d96dd65a42ca)
-![005](https://github.com/user-attachments/assets/7841e313-231c-476b-ac83-59add53275f1)
-![006](https://github.com/user-attachments/assets/22f6bfaf-a8d9-43e6-84c1-36c2e99ff7b9)
-![007](https://github.com/user-attachments/assets/87928782-3f96-4fa7-88ac-3119ebc0fb90)
-![008](https://github.com/user-attachments/assets/e0e36d32-f47c-45af-abe7-88479ea8585b)
-![009](https://github.com/user-attachments/assets/bf6a7efd-e00a-4b3b-becb-3932a977adef)
-![010](https://github.com/user-attachments/assets/b5d4a7ea-874c-47fb-b71d-c996e0991a9e)
-![011](https://github.com/user-attachments/assets/87e46ad8-5273-48a6-b4e3-c7370c175abc)
-![012](https://github.com/user-attachments/assets/a4ab1a4f-1f3e-4bb4-9aca-9bb693441bb9)
-![013](https://github.com/user-attachments/assets/947d0046-3339-4b30-a01a-3543428199ad)
-![014](https://github.com/user-attachments/assets/a2811a30-ae3e-4075-a610-ea3385d75559)
-![015](https://github.com/user-attachments/assets/02d4cb23-0161-4228-9b8e-cac2f3ea4951)
-![016](https://github.com/user-attachments/assets/e58a11ca-ef21-45d3-a87a-034380f9b50d)
-![017](https://github.com/user-attachments/assets/96d8955a-1891-4d01-89e4-d74f38603b47)
-![018](https://github.com/user-attachments/assets/367e4e16-26c5-42bb-a700-b92f3f118e4c)
+![001](https://github.com/user-attachments/assets/d2b93927-3403-40f3-b5e2-671c2e52c22f)
+![002](https://github.com/user-attachments/assets/e1705a8d-b064-4832-8ed4-0b0c8c4d108f)
+![003](https://github.com/user-attachments/assets/89807741-8804-4356-a81d-fc7bc2139df7)
+![004](https://github.com/user-attachments/assets/249de712-7b75-46bb-9b1b-d6b7667261fa)
+![005](https://github.com/user-attachments/assets/033b3c63-ed04-496f-88b2-2a4df83252ef)
+![006](https://github.com/user-attachments/assets/28a15f9a-6586-40cf-a7a8-099d9f43314a)
+![007](https://github.com/user-attachments/assets/d0c48505-ee4f-490a-b966-372d7dce636b)
+![008](https://github.com/user-attachments/assets/bca957bc-baa2-4d70-9b29-467585a99cf5)
+![009](https://github.com/user-attachments/assets/7ccde844-54fb-4bf4-b1b4-0a88b1b1da6d)
+![010](https://github.com/user-attachments/assets/4c61e995-7459-4f7b-abf7-dd4a754df4e3)
+![011](https://github.com/user-attachments/assets/9770a8fe-c9ae-494f-b356-7ef41d94740c)
+![012](https://github.com/user-attachments/assets/5711b433-ed5a-41ec-a0f5-3a60e27d2904)
+![013](https://github.com/user-attachments/assets/8ac5c55a-733c-48ee-9326-e082e37582cf)
+![014](https://github.com/user-attachments/assets/a8c99e6a-5626-42cd-8f38-1a288e0f599e)
+![015](https://github.com/user-attachments/assets/8f6676a9-1883-4950-8912-8a683fae78a7)
+![016](https://github.com/user-attachments/assets/86529541-1a8e-46e7-a6bc-230fb63ba905)
+![017](https://github.com/user-attachments/assets/87eea1a6-8797-4ad9-b8e2-891b2a1aed9c)
+![018](https://github.com/user-attachments/assets/0b8c590c-0c1b-4c3a-8b6f-3a7ddd3bffca)
 
 
