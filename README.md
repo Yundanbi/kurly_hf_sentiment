@@ -17,8 +17,8 @@
 
 ---
 
-## 🔗 Quick Links
-- 👉 간단 ERD : ![005](https://github.com/user-attachments/assets/7841e313-231c-476b-ac83-59add53275f1)
+## 🔗 ERD
+ ![005](https://github.com/user-attachments/assets/7841e313-231c-476b-ac83-59add53275f1)
 
 
 ---
@@ -90,10 +90,12 @@ Spring Boot + React + MySQL 기반. JWT 인증/인가, Flask(HuggingFace)로 감
 ## 🖥️ 구현 화면
 | 기능 | 화면 |
 |---|---|
-| 숙소<br/>검색/결과 | ![검색결과](https://github.com/user-attachments/assets/38572938-5657-4464-8519-1830db869487) |
-| 회원예약 페이지 | ![회원예약](https://github.com/user-attachments/assets/d9030c84-e6d7-4b4d-9894-b2a0db84650f) |
-| 비회원 예약 페이지 | ![비회원예약](https://github.com/user-attachments/assets/d13558b1-1b18-4c29-b64c-5f3957caff70) |
-| 비회원 예약확인/취소 | ![비회원취소](https://github.com/user-attachments/assets/6caba93e-0f63-4ccf-ac71-a11346d7af62) |
+| 회원가입 | ![컬리 회원가입](https://github.com/user-attachments/assets/68755205-7a02-4697-843e-97ffca98d267) |
+| 로그인 | ![로그인](https://github.com/user-attachments/assets/56c1e4d9-f675-403a-90b6-a0635b606d3e) |
+| 허깅페이스 & 문의남기기 | ![허깅페이스 문의남기기](https://github.com/user-attachments/assets/41fb0946-2f83-4710-87a1-58eec46ae1c3) |
+| 어드민으로 문의글 보기 | ![고객게시판 어드민](https://github.com/user-attachments/assets/8276f1ba-86ca-4c8d-ab7b-f38af7eef61c) |
+| 회원으로 문의글 보기 | ![일반회원 본인거만 수정 삭제 가능](https://github.com/user-attachments/assets/0956d301-1997-4b5a-9eda-fcff36fbdf6f) |
+| 어드민/회원 문의 댓글 보기 | ![어드민시 수정삭제가능 비회원시 읽기만 가능](https://github.com/user-attachments/assets/66e840df-ef4f-4cce-8113-e02aab5c2057) |
 
 <details>
   <summary><b>📸 추가 스크린샷 (펼쳐보기)</b></summary><br>
