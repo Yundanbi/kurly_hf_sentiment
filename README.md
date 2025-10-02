@@ -73,6 +73,17 @@
 ---
 
 
+---
+
+## 🔍 트러블슈팅 사례
+- **CORS 에러 해결**: React ↔ Spring Boot ↔ Flask 3단 구조에서 발생한 CORS 문제를 `CorsConfigurationSource` 설정으로 해결  
+- **Lazy Loading 직렬화 이슈**: `Board` 조회 시 `author` / `answer` Fetch Join, DTO Projection으로 최적화  
+- **JWT 401/403**: `JwtAuthFilter`에서 화이트리스트 경로 지정, ROLE prefix 표준화(`ROLE_ADMIN`)  
+
+---
+
+
+
 ## PPT
 ![001](https://github.com/user-attachments/assets/d2b93927-3403-40f3-b5e2-671c2e52c22f)
 ![002](https://github.com/user-attachments/assets/e1705a8d-b064-4832-8ed4-0b0c8c4d108f)
