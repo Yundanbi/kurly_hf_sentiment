@@ -126,7 +126,7 @@
 ![012](https://github.com/user-attachments/assets/5711b433-ed5a-41ec-a0f5-3a60e27d2904)
 ![013](https://github.com/user-attachments/assets/8ac5c55a-733c-48ee-9326-e082e37582cf)
 ![014](https://github.com/user-attachments/assets/a8c99e6a-5626-42cd-8f38-1a288e0f599e)
-![015](https://github.com/user-attachments/assets/8f6676a9-1883-4950-8912-8a683fae78a7)
+![컬리사이트-015](https://github.com/user-attachments/assets/c79d7b3f-decc-47f4-93a3-936101f455bb)
 ![016](https://github.com/user-attachments/assets/86529541-1a8e-46e7-a6bc-230fb63ba905)
 ![017](https://github.com/user-attachments/assets/87eea1a6-8797-4ad9-b8e2-891b2a1aed9c)
 ![018](https://github.com/user-attachments/assets/0b8c590c-0c1b-4c3a-8b6f-3a7ddd3bffca)
