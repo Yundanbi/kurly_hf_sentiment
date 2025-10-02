@@ -73,14 +73,42 @@
 ---
 
 
----
+## 🧩 문제 해결 사례
 
-## 🔍 트러블슈팅 사례
-- **CORS 에러 해결**: React ↔ Spring Boot ↔ Flask 3단 구조에서 발생한 CORS 문제를 `CorsConfigurationSource` 설정으로 해결  
-- **Lazy Loading 직렬화 이슈**: `Board` 조회 시 `author` / `answer` Fetch Join, DTO Projection으로 최적화  
-- **JWT 401/403**: `JwtAuthFilter`에서 화이트리스트 경로 지정, ROLE prefix 표준화(`ROLE_ADMIN`)  
+<details>
+  <summary><b>1) CORS 에러 (React ↔ Spring Boot ↔ Flask)</b></summary><br>
 
----
+**문제 상황**  
+- React → Spring Boot, Spring Boot → Flask 요청 시 CORS 에러 발생  
+- 브라우저에서 API 응답이 차단되어 데이터 교환 불가  
+
+**해결 과정**  
+- `CorsConfigurationSource`를 SecurityConfig에 등록  
+- `allowedOrigins`, `allowedMethods`를 명확히 지정  
+- OPTIONS 프리플라이트 요청까지 허용 처리  
+
+**결과 및 학습점**  
+- 3단 구조에서도 정상 통신 가능  
+- 단순히 “CORS 허용”이 아니라, 보안과 편의를 모두 고려해야 함을 학습
+</details>
+
+<details>
+  <summary><b>2) Lazy Loading 직렬화 이슈</b></summary><br>
+
+**문제 상황**  
+- `Board` 조회 시 `author` / `answer`가 `LazyInitializationException` 또는 `ByteBuddyInterceptor`로 직렬화 실패  
+- 프론트로 JSON 응답이 내려가지 않음  
+
+**해결 과정**  
+- 상세 조회 시 Fetch Join(`findByIdWithAuthorAndAnswer`)으로 필요한 엔티티를 한 번에 로딩  
+- 목록 조회는 DTO Projection(`BoardListItemResponse`)으로 변환해 Proxy 제거  
+
+**결과 및 학습점**  
+- 불필요한 Lazy Loading 문제 제거, API 안정화  
+- “조회용 DTO 분리”가 유지보수와 성능에 필수적임을 체감
+</details>
+
+<details>
 
 
 
